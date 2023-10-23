@@ -1,2 +1,2 @@
 # Cubedle
-HackJam 2023 Project
+USF HackJam 2023 Project
