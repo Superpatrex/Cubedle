@@ -5,10 +5,20 @@
   --tile-size: 20%;
   --tile-font-size: 25px;
   --block-background-color: #252525;
-  --body-background-color: black;
+  --not-present-color:#333333;
+  --body-background-color: white;
   --text-color: white;
   --correct-color:#538d4e;
-  --present-color:#b59f3b;
+  --present-color:#edc24a;
+  --reflection-distance:90px;
+  --scale-factor: 0.8;
+  --small-scale-factor: 0.5;
+  --perspective:600px;
+}
+
+@font-face{
+  font-family:nytFranklin;
+  src: url(../assets/franklin-normal-600.ttf);
 }
 
 *,
@@ -24,44 +34,68 @@ body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
   color:white;
+  overflow:hidden;
+}
+
+#logo{
+  height:15vh;
+  margin:auto;
+}
+.logo-container{
+  width:100vw;
+  /* height: 5vw; */
+  text-align: center;
+  align-items: center;
+  top: 0;
+  /* right: 0;
+  left: 0;
+  bottom: 0;
+  top: 5%; */
+  /* margin: auto; */
+  user-select: none;
+  /* position: absolute; */
 }
 
 #wrapper {
-  padding-top: 10%;
+  padding-top: 15vh;
 }
 
 .viewport {
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+  -webkit-perspective: var(--perspective);
+  -moz-perspective: var(--perspective);
+  -ms-perspective: var(--perspective);
+  -o-perspective: var(--perspective);
+  perspective: var(--perspective);
+  text-align: center;
   -webkit-perspective-origin: 50% 200px;
   -moz-perspective-origin: 50% 200px;
   -ms-perspective-origin: 50% 200px;
   -o-perspective-origin: 50% 200px;
-  perspective-origin: 50% 200px;
-  -webkit-transform: scale(0.8, 0.8);
-  -moz-transform: scale(0.8, 0.8);
-  -ms-transform: scale(0.8, 0.8);
-  -o-transform: scale(0.8, 0.8);
-  transform: scale(0.8, 0.8);
-  -webkit-box-reflect: below 170px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1)));
+  perspective-origin: 50% 100px;
+  -webkit-transform: scale(var(--scale-factor), var(--scale-factor));
+  -moz-transform: scale(var(--scale-factor), var(--scale-factor)); 
+  -ms-transform: scale(var(--scale-factor), var(--scale-factor));
+  -o-transform: scale(var(--scale-factor), var(--scale-factor));
+  transform: scale(var(--scale-factor), var(--scale-factor));
+  -webkit-box-reflect: below var(--reflection-distance) -webkit-linear-gradient(transparent , rgba(250, 250, 250, 0.1) 50%, transparent);
+  position:relative;  
 }
 
 .cube {
   position: relative;
-  margin: 0 auto;
+  margin: -9vh auto;
   /* Height controls vertical offset pivot point */
   height: var(--cube-pivot-height);
   /* Width controls horizontal offset of pivot point */
   width: var(--cube-pivot-width);
+  align-items: center;
+  left: 1.2%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: rotateX(136deg) rotateY(1122deg);
+  -webkit-transform: rotateX(136deg) rotateY(1122deg) ;
   -moz-transform: rotateX(136deg) rotateY(1122deg);
   -ms-transform: rotateX(136deg) rotateY(1122deg);
   -o-transform: rotateX(136deg) rotateY(1122deg);
@@ -119,6 +153,7 @@ body {
   transition: color 600ms;
   display: block;
   grid-row-start: auto;
+  outline: 1px solid white;
 }
 
 
@@ -141,7 +176,7 @@ body {
   -o-transform: rotateX(90deg) translateZ(100px);
   transform: rotateX(90deg) translateZ(100px);
   outline: 10px solid transparent;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .cube>div:nth-child(2) {
@@ -151,7 +186,7 @@ body {
   -o-transform: translateZ(100px);
   transform: translateZ(100px);
   outline: 1px solid transparent;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .cube>div:nth-child(3) {
@@ -161,7 +196,7 @@ body {
   -o-transform: rotateY(90deg) translateZ(100px);
   transform: rotateY(90deg) translateZ(100px);
   outline: 1px solid transparent;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .cube>div:nth-child(4) {
@@ -171,7 +206,7 @@ body {
   -o-transform: rotateY(180deg) translateZ(100px);
   transform: rotateY(180deg) translateZ(100px);
   outline: 1px solid transparent;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .cube>div:nth-child(5) {
@@ -179,9 +214,9 @@ body {
   -moz-transform: rotateY(-90deg) translateZ(100px);
   -ms-transform: rotateY(-90deg) translateZ(100px);
   -o-transform: rotateY(-90deg) translateZ(100px);
-  transform: rotateY(-90deg) translateZ(100px) rotateZ(90deg);
+  transform: rotateY(-90deg) translateZ(100px);
   outline: 1px solid transparent;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .cube>div:nth-child(6) {
@@ -191,7 +226,7 @@ body {
   -o-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
   transform: rotateX(-90deg) rotate(180deg) translateZ(100px) rotateZ(180deg);
   outline: 1px solid transparent;
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 .correct {
@@ -199,7 +234,20 @@ body {
 }
 
 .present {
-  background-color:var(--present-color);
+  background-color:var(--present-color) !important;
+  color:white !important;
+  border:grey !important;
+}
+.allfound {
+  background-color:var(--correct-color) !important;
+  color:white !important;
+  border:grey !important;
+}
+
+.notpresent{
+  background-color:var(--not-present-color) !important;
+  color:white !important;
+  border:grey !important;
 }
 
 object {
@@ -210,12 +258,160 @@ object:hover {
   opacity: 1;
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 1500px) {
   .viewport {
-    -webkit-transform: scale(0.6, 0.6);
-    -moz-transform: scale(0.6, 0.6);
-    -ms-transform: scale(0.6, 0.6);
-    -o-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
+    -webkit-transform: scale(var(--small-scale-factor), var(--small-scale-factor));
+    -moz-transform: scale(var(--small-scale-factor), var(--small-scale-factor));
+    -ms-transform: scale(var(--small-scale-factor), var(--small-scale-factor));
+    -o-transform: scale(var(--small-scale-factor), var(--small-scale-factor));
+    transform: scale(var(--small-scale-factor), var(--small-scale-factor));
   }
+}
+
+.keyboard {
+  position: absolute;
+  /* outline: 1px dashed red; */
+  height: 27vh;
+  width: 80vh;
+  /* left: 30%; */
+  align-items: center;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+}
+
+.keyrow {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  justify-content: space-around;
+}
+
+.keycap {
+  background-color: #d3d6da;
+  height: 7.5vh;
+  width: 5vh;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 7vh;
+  color: black;
+  font-size: 3vh;
+  position: relative;
+  user-select: none;
+  font-family: fantasy;
+  border: none;
+}
+
+#entertext{
+  user-select: none;
+  color: black;
+  text-align: center;
+  font-size: 6vh;
+  margin: auto;
+  font-family: fantasy;
+  width:40vh;
+  height:10vh;
+  margin-bottom:20px;
+  /* background-color:#b59f3b */
+  background-color: none;
+}
+
+.blank{
+  width:15%;
+  display:inline-block;
+  /* background-color:fuchsia; */
+  position:relative;
+  height:100%;
+  background-color: none;
+  border: #252525;
+}
+
+.blanktext{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin:0px;
+  text-align:center;
+  background-color: none;
+  border:#252525;
+}
+
+.winScreen {
+  height: 80%;
+  width: 35%;
+  background-color: white;
+  color:black;
+  position: absolute;
+  top: 10%;
+  margin:auto;
+  left: 0px;
+  right:0px;
+  text-align: center;
+  font-size: 10vh;
+  opacity: 1;
+  display: none;
+  filter: drop-shadow(0px 6px 6px rgba(0,0,0,0.3));
+  border-radius: 20px;
+  font-family: fantasy;
+  
+}
+
+.loseScreen {
+  color:black;
+  height: 80%;
+  width: 45%;
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  margin:auto;
+  left: 0px;
+  right:0px;
+  text-align: center;
+  font-size: 10vh;
+  opacity: 1;
+  display:none;
+  border-radius: 20px;
+  filter: drop-shadow(0px 6px 6px rgba(0,0,0,0.4));
+  font-family: fantasy;
+  
+}
+#answersButton{
+  width:100px;
+  margin:auto;
+  font: size 1.5em;
+}
+
+#side6{
+  text-align: center;
+  padding:auto;
+}
+
+.ucflogo{
+  position:absolute;
+  margin:auto;
+  top:50%;
+  bottom:50%;  
+  width:100%;
+  
+}
+
+.side{
+  outline: 1px solid white !important;
+}
+
+.attemptCounter {
+  position: absolute;
+  color: black;
+  font-family: fantasy;
+  font-size: 3vh;
+  bottom: 2%;
+  right: 23%;
 }

@@ -5,239 +5,83 @@
 </head>
 
 <body>
+    <div class="logo-container"><img id="logo" src="../assets/logo.png"/></div>
     <div id="wrapper">
         <div class="viewport">
-            <div id="xpos">Balls</div>
-            <div id="ypos">Balls</div>
             <div class="cube">
-                <!-- <div class="side">
-                    <div class="side-row">
-                        <div class="tile correct" onclick="alert('balls')">1</div>
-                        <div class="tile correct">2</div>
-                        <div class="tile present">3</div>
-                        <div class="tile">4</div>
-                        <div class="tile">5</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile" onclick="alert('balls')">1</div>
-                        <div class="tile">2</div>
-                        <div class="tile">3</div>
-                        <div class="tile">4</div>
-                        <div class="tile">5</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile" onclick="alert('balls')">1</div>
-                        <div class="tile">2</div>
-                        <div class="tile">3</div>
-                        <div class="tile">4</div>
-                        <div class="tile">5</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile" onclick="alert('balls')">1</div>
-                        <div class="tile">2</div>
-                        <div class="tile">3</div>
-                        <div class="tile">4</div>
-                        <div class="tile">5</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile" onclick="alert('balls')">1</div>
-                        <div class="tile">2</div>
-                        <div class="tile">3</div>
-                        <div class="tile">4</div>
-                        <div class="tile">5</div>
-                    </div>
-                </div>
-                <div class="side">
-                    <div class="side-row">
-                        <div class="tile">6</div>
-                        <div class="tile">7</div>
-                        <div class="tile">8</div>
-                        <div class="tile">9</div>
-                        <div class="tile">10</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">6</div>
-                        <div class="tile">7</div>
-                        <div class="tile">8</div>
-                        <div class="tile">9</div>
-                        <div class="tile">10</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">6</div>
-                        <div class="tile">7</div>
-                        <div class="tile">8</div>
-                        <div class="tile">9</div>
-                        <div class="tile">10</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">6</div>
-                        <div class="tile">7</div>
-                        <div class="tile">8</div>
-                        <div class="tile">9</div>
-                        <div class="tile">10</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">6</div>
-                        <div class="tile">7</div>
-                        <div class="tile">8</div>
-                        <div class="tile">9</div>
-                        <div class="tile">10</div>
-                    </div>
-                </div>
-                <div class="side">
-                    <div class="side-row">
-                        <div class="tile">11</div>
-                        <div class="tile">12</div>
-                        <div class="tile">13</div>
-                        <div class="tile">14</div>
-                        <div class="tile">15</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">11</div>
-                        <div class="tile">12</div>
-                        <div class="tile">13</div>
-                        <div class="tile">14</div>
-                        <div class="tile">15</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">11</div>
-                        <div class="tile">12</div>
-                        <div class="tile">13</div>
-                        <div class="tile">14</div>
-                        <div class="tile">15</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">11</div>
-                        <div class="tile">12</div>
-                        <div class="tile">13</div>
-                        <div class="tile">14</div>
-                        <div class="tile">15</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">11</div>
-                        <div class="tile">12</div>
-                        <div class="tile">13</div>
-                        <div class="tile">14</div>
-                        <div class="tile">15</div>
-                    </div>
-                </div>
-                <div class="side">
-                    <div class="side-row">
-                        <div class="tile">16</div>
-                        <div class="tile">17</div>
-                        <div class="tile">18</div>
-                        <div class="tile">19</div>
-                        <div class="tile">20</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">16</div>
-                        <div class="tile">17</div>
-                        <div class="tile">18</div>
-                        <div class="tile">19</div>
-                        <div class="tile">20</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">16</div>
-                        <div class="tile">17</div>
-                        <div class="tile">18</div>
-                        <div class="tile">19</div>
-                        <div class="tile">20</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">16</div>
-                        <div class="tile">17</div>
-                        <div class="tile">18</div>
-                        <div class="tile">19</div>
-                        <div class="tile">20</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">16</div>
-                        <div class="tile">17</div>
-                        <div class="tile">18</div>
-                        <div class="tile">19</div>
-                        <div class="tile">20</div>
-                    </div>
-                </div>
-                <div class="side">
-                    <div class="side-row">
-                        <div class="tile">21</div>
-                        <div class="tile">22</div>
-                        <div class="tile">23</div>
-                        <div class="tile">24</div>
-                        <div class="tile">25</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">21</div>
-                        <div class="tile">22</div>
-                        <div class="tile">23</div>
-                        <div class="tile">24</div>
-                        <div class="tile">25</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">21</div>
-                        <div class="tile">22</div>
-                        <div class="tile">23</div>
-                        <div class="tile">24</div>
-                        <div class="tile">25</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">21</div>
-                        <div class="tile">22</div>
-                        <div class="tile">23</div>
-                        <div class="tile">24</div>
-                        <div class="tile">25</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">21</div>
-                        <div class="tile">22</div>
-                        <div class="tile">23</div>
-                        <div class="tile">24</div>
-                        <div class="tile">25</div>
-                    </div>
-                </div>
-                <div class="side">
-                    <div class="side-row">
-                        <div class="tile">26</div>
-                        <div class="tile">27</div>
-                        <div class="tile">28</div>
-                        <div class="tile">29</div>
-                        <div class="tile">30</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">26</div>
-                        <div class="tile">27</div>
-                        <div class="tile">28</div>
-                        <div class="tile">29</div>
-                        <div class="tile">30</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">26</div>
-                        <div class="tile">27</div>
-                        <div class="tile">28</div>
-                        <div class="tile">29</div>
-                        <div class="tile">30</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">26</div>
-                        <div class="tile">27</div>
-                        <div class="tile">28</div>
-                        <div class="tile">29</div>
-                        <div class="tile">30</div>
-                    </div>
-                    <div class="side-row">
-                        <div class="tile">26</div>
-                        <div class="tile">27</div>
-                        <div class="tile">28</div>
-                        <div class="tile">29</div>
-                        <div class="tile">30</div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
     <script>
-        var wordArray = [[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']],[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']],[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']],[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']],[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']],[['B', 'I', 'T', 'C', 'H'], ['F', 'U', 'C', 'K', 'Y'], ['S', 'H', 'I', 'T', 'E'], ['D', 'A', 'M', 'N', 'B'], ['B', 'A', 'L', 'L', 'S']]];
-        const cube = document.getElementsByClassName('cube')[0];
+        var hasLost = false;
+        const numSides = 6;
+        const numRows = 5;
+        const numTiles = 5;
+        let set = new Set()
+        var wordArray = [[
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']],
+            [['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']],
+            [['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']],
+            [['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']],
+            [['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']],
+            [['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','',''],
+            ['','','','','']
+        ]];
+        var answerArray = [[
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' ']],
+        [['B', 'E', 'S', 'A', 'W'], 
+        ['A', 'B', 'A', 'C', 'A'], 
+        ['A', 'B', 'B', 'E', 'D'], 
+        ['P', 'E', 'R', 'N', 'E'], 
+        ['S', 'T', 'E', 'E', 'D']],
+        [['E', 'X', 'U', 'R', 'B'], 
+        ['A', 'Y', 'L', 'E', 'A'], 
+        ['S', 'L', 'E', 'B', 'A'], 
+        ['L', 'E', 'T', 'U', 'P'], 
+        ['E', 'M', 'I', 'T', 'S']],
+        [['E', 'E', 'R', 'I', 'E'], 
+        ['A', 'B', 'A', 'C', 'A'], 
+        ['R', 'E', 'D', 'E', 'S'], 
+        ['S', 'N', 'A', 'R', 'L'], 
+        ['T', 'A', 'R', 'S', 'E']],
+        [['W', 'A', 'C', 'K', 'E'], 
+        ['A', 'B', 'A', 'C', 'A'], 
+        ['D', 'E', 'B', 'A', 'R'], 
+        ['E', 'A', 'R', 'L', 'S'], 
+        ['D', 'R', 'E', 'S', 'T']],
+        [[' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' '], 
+        [' ', ' ', ' ', ' ', ' ']]];
+        var cube = document.getElementsByClassName('cube')[0];
         window.addEventListener("DOMContentLoaded", loadCube(wordArray));
 
         function loadCube(wordArray) {
@@ -245,6 +89,11 @@
                 let newSide = document.createElement("div");
                 newSide.className = "side";
                 newSide.id = "side" + (sides + 1);
+                if(sides == 0 || sides == 5){
+                    newSide.innerHTML = "<img class ='ucflogo' src='../assets/ucflogo.png'>";
+                    cube.appendChild(newSide);
+                    continue;
+                }
                 for (var rows = 0; rows < 5; rows++) {
                     let newRow = document.createElement("div");
                     newRow.className = "side-row";
@@ -268,6 +117,219 @@
         }
     </script>
     <script src="../scripts/script.js"></script>
+    <div class="keyboard">
+        <div class = "input" id = "entertext">
+            <div class="blank"><p class="blanktext"></p></div>
+            <div class="blank"><p class="blanktext"></p></div>
+            <div class="blank"><p class="blanktext"></p></div>
+            <div class="blank"><p class="blanktext"></p></div>
+            <div class="blank"><p class="blanktext"></p></div>
+        </div>
+        <div class="keyrow" style="width: 90%; left: 5%">
+            <button class="keycap" id='Q' onclick = "userInput('Q')" >Q</button>
+            <button class="keycap" id='W' onclick = "userInput('W')">W</button>
+            <button class="keycap" id='E' onclick = "userInput('E')">E</button>
+            <button class="keycap" id='R' onclick = "userInput('R')">R</button>
+            <button class="keycap" id='T' onclick = "userInput('T')">T</button>
+            <button class="keycap" id='Y' onclick = "userInput('Y')">Y</button>
+            <button class="keycap" id='U' onclick = "userInput('U')">U</button>
+            <button class="keycap" id='I' onclick = "userInput('I')">I</button>
+            <button class="keycap" id='O' onclick = "userInput('O')">O</button>
+            <button class="keycap" id='P' onclick = "userInput('P')">P</button>
+        </div>
+        <div class="keyrow" style="width: 80%; left: 10%">
+            <button class="keycap" id='A' onclick = "userInput('A')">A</button>
+            <button class="keycap" id='S' onclick = "userInput('S')">S</button>
+            <button class="keycap" id='D' onclick = "userInput('D')">D</button>
+            <button class="keycap" id='F' onclick = "userInput('F')">F</button>
+            <button class="keycap" id='G' onclick = "userInput('G')">G</button>
+            <button class="keycap" id='H' onclick = "userInput('H')">H</button>
+            <button class="keycap" id='J' onclick = "userInput('J')">J</button>
+            <button class="keycap" id='K' onclick = "userInput('K')">K</button>
+            <button class="keycap" id='L' onclick = "userInput('L')">L</button>
+        </div>
+        <div class="keyrow" style="width: 90%; left: 5%;">
+            <button class="keycap" id='Enter' style="width: 10vh; font-size: 2.3vh;" onclick = "userInput('Enter')">ENTER</button>
+            <button class="keycap" id='Z' onclick = "userInput('Z')">Z</button>
+            <button class="keycap" id='X' onclick = "userInput('X')">X</button>
+            <button class="keycap" id='C' onclick = "userInput('C')">C</button>
+            <button class="keycap" id='V' onclick = "userInput('V')">V</button>
+            <button class="keycap" id='B' onclick = "userInput('B')">B</button>
+            <button class="keycap" id='N' onclick = "userInput('N')">N</button>
+            <button class="keycap" id='M' onclick = "userInput('M')">M</button>
+            <button class="keycap" id="Backspace" onclick = "userInput('Backspace')" style="width: 10vh;"><img src="../assets/backspace.png" style="width: 60%; height: 50%;"></button>
+        </div>
+    </div>
+    <div class="attemptCounter"><span id="numAttempts">30</span> Attempts Left</div>
+    <div class="winScreen"><p>Winner!</p>
+        STATISTICS
+        <p style="justify-content:space-around; display:flex;"><span id="attemptsLeft">30</span> <span>100</span> <span>1</span> <span>1</span></p>
+        <div style="justify-content:space-around; display:flex; margin-left:-3vh; margin-top:-10vh;">
+            <div style="width: 1vh; font-size: 3vh; text-align:center;">Attempts Left</div> 
+            <div style="width: 1vh; font-size: 3vh; margin-left:1vh;">Win %</div> 
+            <div style="width: 1vh; font-size: 3vh;">Current Streak</div> 
+            <div style="width: 1vh; font-size: 3vh;">Max Streak</div>
+        </div>
+    </div>
+    <div class="loseScreen">LOSER
+        <div>
+            Do you want to see the answer?
+        </div>
+        <button class="keycap" id= "answersButton" onclick = "showSolution()">Yes</button>
+
+    </div>
+    <script>
+        var attemptsBox = document.getElementsByClassName('attemptCounter');
+        attemptsBox.innerHTML = 30;
+        const endAttempts = 30;
+        var attempts = endAttempts;
+        var guess = ['','','','',''];
+        var length = 0;
+        var blanks = document.getElementsByClassName('blanktext');
+        function userInput(input)
+        {
+            if (input == 'Backspace')
+            {
+                if (length == 0)
+                    return;
+                guess[length-1] = '';
+                length--;
+                blanks[length].innerHTML = '';
+
+            } 
+            else if (input == 'Enter')
+            {
+                if (length == 5)
+                {
+                    checkCube(guess);
+                    guess = ['','','','',''];
+                    length = 0;
+                    for(var b = 0; b < 5; b++)
+                    {
+                        blanks[b].innerHTML='';
+                    }
+                    
+                    checkIfWon();
+                
+                    if (attempts <= 0)
+                    {
+                        if(!checkIfWon())
+                        {
+                            document.getElementsByClassName('loseScreen')[0].style.display = 'block';
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (length < 5)
+                {
+                    blanks[length].innerHTML = input;
+                    guess[length] = input;
+                    length++;
+                }
+            }
+        }
+
+        function showSolution()
+        {   
+            cube.innerHTML='';
+            loadCube(answerArray);
+            document.getElementsByClassName('loseScreen')[0].style.display = 'none';
+        }
+
+        function checkIfWon()
+        {
+            for (i = 0; i < numSides; i++)
+            {
+                if (i == 0 || i == 5)
+                {
+                    continue;
+                }
+                
+                for (j = 0; j < numRows; j++)
+                {
+                    for (k = 0; k < numTiles; k++)
+                    {
+                        if (cube.children[i].children[j].children[k].className != "tile correct")
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            
+            document.getElementsByClassName('winScreen')[0].style.display = 'block';
+            document.getElementById('attemptsLeft').innerHTML=endAttempts-attempts;
+            return true;
+        }
+
+        function checkCube(myString)
+        {
+            var cube = document.getElementsByClassName('cube')[0];
+            var isPresent = [false, false, false, false, false];
+            var hasFoundAll = [true, true, true, true, true];
+            attempts -= 1;
+            document.getElementById('numAttempts').innerHTML = attempts;
+
+            for (i = 0; i < numSides; i++)
+            {
+                var myTwoDArray = answerArray;
+                
+                for (var j = 0; j < numRows; j++)
+                {
+                    for (var k = 0; k < myTwoDArray[i][j].length; k++)
+                    {
+                        for (var l = 0; l < guess.length; l++)
+                        {
+                            if (guess[l] == myTwoDArray[i][j][k])
+                            {
+                                isPresent[l] = true;
+                                //console.log("match "+guess[l]+" id: "+cube.children[i].children[j].children[k].id);
+                                if(l==k){
+                                    cube.children[i].children[j].children[k].innerHTML = guess[l];
+                                    if(cube.children[i].children[j].children[k].className != "tile correct")
+                                    {
+                                        cube.children[i].children[j].children[k].className = "tile correct";
+                                    }
+                                }
+                                else{
+                                    if(cube.children[i].children[j].children[k].className != "tile correct")
+                                        hasFoundAll[l] = false;
+                                }
+                                //myTwoDArray[i][j][k] = 'X';
+                            }
+                            
+                        }
+                        // if (myTwoDArray[i][j] == ['X', 'X', 'X', 'X', 'X'])
+                        // {
+                        //     for (var y = 0; y < myTwoDArray[i][j].length; y++)
+                        //     {
+                        //         wordArray[i][j][y] = guess[y];
+                        //     }
+                        //     return;
+                        // }
+                    }
+                }
+            }
+            console.log(isPresent);
+            console.log(hasFoundAll);
+            for(let check = 0; check < isPresent.length; check++)
+            {
+                var currentKey = document.getElementById(guess[check]);
+                if(isPresent[check])
+                {
+                    if(hasFoundAll[check])
+                        document.getElementById(guess[check]).className = "keycap allfound";
+                    else
+                        if(document.getElementById(guess[check]).className != "keycap allfound")
+                             document.getElementById(guess[check]).className = "keycap present";
+                }
+                else
+                    document.getElementById(guess[check]).className = "keycap notpresent";
+            }
+        }
+    </script>
 </body>
 
 </html>

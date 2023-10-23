@@ -1,6 +1,6 @@
 var events = new Events();
-var xbox = document.getElementById('xpos');
-var ybox = document.getElementById('ypos');
+// var xbox = document.getElementById('xpos');
+// var ybox = document.getElementById('ypos');
 events.add = function(obj) {
   obj.events = { };
 }
@@ -206,7 +206,7 @@ Viewport.prototype.animate = function() {
     }
 
     this.positionY -= this.torqueY;
-    ybox.innerHTML = "Y Position: "+this.positionY;
+    // ybox.innerHTML = "Y Position: "+this.positionY;
 
     if(this.positionY > 360) {
       this.positionY -= 360;
@@ -216,7 +216,7 @@ Viewport.prototype.animate = function() {
 
     if(this.positionY > 90 && this.positionY < 270) {
       this.positionX -= this.torqueX;
-      xbox.innerHTML = "X Position: " + this.positionX;
+    //  xbox.innerHTML = "X Position: " + this.positionX;
 
       if(!this.upsideDown) {
         this.upsideDown = false;
@@ -226,7 +226,7 @@ Viewport.prototype.animate = function() {
     } else {
 
       this.positionX += this.torqueX;
-      xbox.innerHTML = "X Position: " + this.positionX;
+    //  xbox.innerHTML = "X Position: " + this.positionX;
 
       if(this.upsideDown) {
         this.upsideDown = true;
@@ -236,10 +236,10 @@ Viewport.prototype.animate = function() {
 
     if(this.positionX > 360) {
       this.positionX -= 360;
-      xbox.innerHTML = "X Position: " + this.positionX;
+    //  xbox.innerHTML = "X Position: " + this.positionX;
     } else if(this.positionX < 0) {
       this.positionX += 360;
-      xbox.innerHTML = "X Position: " + this.positionX;
+      // xbox.innerHTML = "X Position: " + this.positionX;
     }
 
     if(!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >= 220 && this.positionY <= 308)) {
@@ -356,3 +356,22 @@ new Cube({
   viewport: viewport,
   element: document.getElementsByClassName('cube')[0]
 });
+
+function keysPressed() {
+  document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    var code = event.code;
+
+    if (code.substring(0,3) == 'Key')
+    {
+      const array = code.split('y');
+      userInput(array[1]);
+    }
+    else if (code == 'Enter' || code == 'Backspace')
+    {
+      userInput(code);
+    }
+  }, false);
+}
+
+keysPressed();
